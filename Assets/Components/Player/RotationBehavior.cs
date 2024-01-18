@@ -15,12 +15,13 @@ public class RotationBehavior : MonoBehaviour
       if (ReferenceEquals(this.target, this)) return;
       
       float distToTarget = Vector3.Distance(this.transform.position, this.target.transform.position);
+      Vector3 relativePos = this.target.transform.position - this.transform.position;
 
+      this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(relativePos, Vector3.up), rotationSpeed * Time.deltaTime);
       if (distToTarget < maxDistance)
         {
-            Vector3 relativePos = this.target.transform.position - this.transform.position;
+            if (distToTarget < 1f) return;
 
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(relativePos, Vector3.up), rotationSpeed * Time.deltaTime);
             this.transform.position = Vector3.MoveTowards(this.transform.position, this.target.transform.position, movementSpeed * Time.deltaTime);
         }
     }
