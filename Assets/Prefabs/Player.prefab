@@ -14,10 +14,12 @@ GameObject:
   - component: {fileID: 3017014402781051601}
   - component: {fileID: 7687577069469494251}
   - component: {fileID: 6308746570470786512}
+  - component: {fileID: 6363150917373078868}
   - component: {fileID: 884982656648533125}
+  - component: {fileID: 7925810359546940013}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +153,20 @@ MonoBehaviour:
   maxDistance: 25
   target: {fileID: 0}
   rotationSpeed: 5
-  movementSpeed: 10
+  radiusSphere: {fileID: 0}
+--- !u!114 &6363150917373078868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920154825547094315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48ac861e7085a4fb42bc8505b41ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2920154825547094315}
 --- !u!114 &884982656648533125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +179,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e48803e7179b34da565d2ef5dc3aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7925810359546940013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920154825547094315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd7de44ffbf0094e8558b42fd884997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1208054235017183788, guid: f0d84b4aa00a9584290b88b874a02abb,
+    type: 3}
+  colorHandler: {fileID: 0}
+  timeElapsed: 0
 --- !u!1 &8378205904894850304
 GameObject:
   m_ObjectHideFlags: 0
